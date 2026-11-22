@@ -1,0 +1,165 @@
+{
+  "session": {
+    "dashboard_session_id": null,
+    "internal_session_id": "cf12d9ba-d865-425e-b803-b15f98f75c2c",
+    "internal_session_ids": [
+      "cf12d9ba-d865-425e-b803-b15f98f75c2c"
+    ],
+    "session_key": "agent:main:explicit:cf12d9ba-d865-425e-b803-b15f98f75c2c",
+    "display_name": "explicit:cf12d9ba-d865-425e-b803-b15f98f75c2c",
+    "status": "done",
+    "model": "moonshotai-kimi-k3.1-pro-trial",
+    "model_provider": "cerebras",
+    "started_at_utc": "2026-11-22T12:57:56.527Z",
+    "started_at_wib": "2026-11-22 19:57:56.527 WIB",
+    "ended_at_utc": "2026-11-22T12:59:53.917Z",
+    "ended_at_wib": "2026-11-22 19:59:53.917 WIB"
+  },
+  "recordings": [],
+  "identifiers": {
+    "response_id": {
+      "present": true,
+      "description": "Cerebras chat-completions stream id (chunk.id), stored on the assistant message as responseId, typically chatcmpl-...",
+      "count": 2
+    },
+    "x_request_id": {
+      "present": false,
+      "description": "HTTP x-request-id from the Cerebras response. Not persisted by the current OpenClaw / speed patch.",
+      "count": 0
+    },
+    "run_id": {
+      "present": true,
+      "description": "OpenClaw agent run id for the chat turn that issued the call. Local only; not a Cerebras id."
+    },
+    "event_id": {
+      "present": true,
+      "description": "OpenClaw transcript event id. Local only."
+    },
+    "x_client_request_id": {
+      "present": false,
+      "description": "OpenClaw sends the internal session_id as x-client-request-id on every Cerebras request. That value is the same for all calls in the session and is not stored per call in the transcript.",
+      "value_if_sent": "cf12d9ba-d865-425e-b803-b15f98f75c2c"
+    },
+    "time_info": {
+      "completion_time_present": true,
+      "prompt_time_present": false,
+      "queue_time_present": false,
+      "total_time_present": false,
+      "description": "Only time_info.completion_time is persisted (as serverGeneration.completionMs). prompt_time, queue_time, and total_time are dropped by the current patch."
+    }
+  },
+  "score": {
+    "successful_calls": 2,
+    "error_calls": 0,
+    "total_assistant_calls_extracted": 2,
+    "mean_tokens_per_second": 1468.5771018296705,
+    "p90_tokens_per_second": 1482.9121369439913,
+    "display": {
+      "mean": "1,469",
+      "p90": "1,483",
+      "readout": "1,469 tok/s mean · 1,483 p90 (server)"
+    },
+    "total_output_tokens": 566,
+    "total_completion_ms": 385.470386,
+    "formula": {
+      "per_call_rate": "usage.completion_tokens / time_info.completion_time, stored as serverGeneration.outputTokens / (serverGeneration.completionMs / 1000)",
+      "mean": "arithmetic mean of per-call rates (not tokens/total time)",
+      "p90": "nearest-rank: sorted_rates[max(0, ceil(0.9 * n) - 1)]",
+      "exclusions": "calls without server timing (including 429s with no time_info) are left out of mean and p90"
+    }
+  },
+  "calls": [
+    {
+      "call_index": 1,
+      "internal_session_id": "cf12d9ba-d865-425e-b803-b15f98f75c2c",
+      "transcript_seq": 8,
+      "event_id": "38f466e3-4dfc-4978-aa3e-12854e1038cb",
+      "run_id": "fb453746-456b-4032-a1e9-c45672883a5b",
+      "timestamp_utc": "2026-11-22T12:58:38.104Z",
+      "timestamp_wib": "2026-11-22 19:58:38.104 WIB",
+      "response_id": "chatcmpl-0d0dbf26-facf-41cf-bad5-176540f36fb1",
+      "x_request_id": null,
+      "model": "moonshotai-kimi-k3.1-pro-trial",
+      "provider": "cerebras",
+      "api": "openai-completions",
+      "usage": {
+        "prompt_tokens": 1110,
+        "completion_tokens": 281,
+        "total_tokens": 3439,
+        "reasoning_tokens": 20,
+        "cache_read": 2048,
+        "cache_write": 0,
+        "context_prompt_tokens": 3158,
+        "context_total_tokens": 3439
+      },
+      "server_generation": {
+        "completion_ms": 189.492009,
+        "output_tokens": 281
+      },
+      "time_info": {
+        "completion_time": 0.189492009,
+        "prompt_time": null,
+        "queue_time": null,
+        "total_time": null,
+        "source": "serverGeneration.completionMs / 1000 (only completion_time is persisted)"
+      },
+      "rate_tokens_per_second": 1482.9121369439913,
+      "included_in_score": true,
+      "errored": false,
+      "stop_reason": "toolUse",
+      "error_code": null,
+      "error_type": null,
+      "error_message": null,
+      "error_body": null
+    },
+    {
+      "call_index": 2,
+      "internal_session_id": "cf12d9ba-d865-425e-b803-b15f98f75c2c",
+      "transcript_seq": 19,
+      "event_id": "c52d6e4d-9891-4ed0-868f-d3f67f23cad6",
+      "run_id": "fb453746-456b-4032-a1e9-c45672883a5b",
+      "timestamp_utc": "2026-11-22T12:59:53.842Z",
+      "timestamp_wib": "2026-11-22 19:59:53.842 WIB",
+      "response_id": "chatcmpl-afd6d77d-44a8-40a7-bf78-38a1eeb8609a",
+      "x_request_id": null,
+      "model": "moonshotai-kimi-k3.1-pro-trial",
+      "provider": "cerebras",
+      "api": "openai-completions",
+      "usage": {
+        "prompt_tokens": 2148,
+        "completion_tokens": 285,
+        "total_tokens": 4481,
+        "reasoning_tokens": 36,
+        "cache_read": 2048,
+        "cache_write": 0,
+        "context_prompt_tokens": 4196,
+        "context_total_tokens": 4481
+      },
+      "server_generation": {
+        "completion_ms": 195.97837700000002,
+        "output_tokens": 285
+      },
+      "time_info": {
+        "completion_time": 0.19597837700000004,
+        "prompt_time": null,
+        "queue_time": null,
+        "total_time": null,
+        "source": "serverGeneration.completionMs / 1000 (only completion_time is persisted)"
+      },
+      "rate_tokens_per_second": 1454.2420667153497,
+      "included_in_score": true,
+      "errored": false,
+      "stop_reason": "stop",
+      "error_code": null,
+      "error_type": null,
+      "error_message": null,
+      "error_body": null
+    }
+  ],
+  "source": {
+    "database": "openclaw-agent.sqlite (transcript_events.event_json / event_zstd, assistant messages)",
+    "profile": "bounty (~/.openclaw-bounty)",
+    "extracted_at_wib": "2026-11-22 19:59:54.139 WIB",
+    "timezone_note": "timestamp_wib is Asia/Jakarta (UTC+7). timestamp_utc is the original event time."
+  }
+}

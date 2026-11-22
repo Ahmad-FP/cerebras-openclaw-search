@@ -1,0 +1,8 @@
+Christmas gift search. Think 3 words max. Immediately call gifts__search_products 5 times in parallel in 1 turn with these exact arguments:
+{"query":"kids toy","limit":1}
+{"query":"candle","limit":1}
+{"query":"blanket","limit":1}
+{"query":"dog toy","limit":1}
+{"query":"coffee mug","limit":1}
+Never make a second tool call. After results arrive, think 3 words max, then output zero prose and no markdown, only one compact single-line JSON copying all 5 returned product objects verbatim in call order:
+{"gifts":[{"name":"","url":"","price":0,"store":""}]}
